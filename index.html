@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUNISH GROUP OF COMPANY</title>
+    <style>
+        :root { --neon-blue: #00d2ff; --cyber-blue: #0045ff; --deep-black: #050505; }
+        body { background: var(--deep-black); font-family: 'Orbitron', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; color: white; overflow: hidden; }
+        .vault-frame { background: rgba(10, 10, 10, 0.9); border: 2px solid var(--neon-blue); padding: 40px; border-radius: 5px; box-shadow: 0 0 20px var(--cyber-blue); width: 350px; text-align: center; position: relative; }
+        .vault-frame::before { content: "ENCRYPTED ACCESS ONLY"; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--deep-black); padding: 0 10px; font-size: 10px; color: var(--neon-blue); letter-spacing: 2px; }
+        h1 { font-size: 18px; margin-bottom: 30px; letter-spacing: 4px; text-shadow: 0 0 10px var(--neon-blue); }
+        input { background: transparent; border: 1px solid var(--cyber-blue); padding: 15px; width: 100%; color: var(--neon-blue); text-align: center; outline: none; margin-bottom: 20px; box-sizing: border-box; }
+        button { background: var(--cyber-blue); border: none; padding: 12px; width: 100%; color: white; font-weight: bold; cursor: pointer; transition: 0.3s; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); }
+        button:hover { background: var(--neon-blue); box-shadow: 0 0 15px var(--neon-blue); color: black; }
+        #vault_links { display: none; margin-top: 25px; border-top: 1px solid #333; padding-top: 20px; text-align: left; }
+        .f-link { display: block; color: var(--neon-blue); text-decoration: none; font-size: 13px; margin: 12px 0; padding: 8px; border-left: 2px solid var(--cyber-blue); background: rgba(0, 210, 255, 0.05); transition: 0.2s; }
+        .f-link:hover { background: rgba(0, 210, 255, 0.2); transform: translateX(10px); }
+    </style>
+</head>
+<body>
+    <div class="vault-frame" id="lock_screen">
+        <h1>MUNISH_SYSTEMS</h1>
+        <div id="input_zone">
+            <input type="password" id="sys_key" placeholder="IDENTIFICATION REQUIRED">
+            <button onclick="accessVault()">INITIALIZE LOGIN</button>
+        </div>
+        <div id="vault_links"></div>
+    </div>
+
+<script>
+	//Encrption
+
+    const _sys_0x1 = "Uk1VTklTSDIwMjY="; 
+    // FILE DATABASE (Base64 Obfuscated)
+    const _sys_0x2 = [
+        { d: "Qy5odG1s", l: "Q2FuY2VsbGF0aW9uIEZvcm0gKE9mZmxpbmUp" },
+        { d: "RUMuaHRtbA==", l: "RWRpdGFibGUgQ2FuY2VsbGF0aW9uIEZvcm0=" }, 
+        { d: "QkMuaHRtbA==", l: "Qm9va2luZyBDaGFuZ2UgRm9ybSAoT2ZmbGluZSk=" }, 
+        { d: "RUJDLmh0bWw=", l: "RWRpdGFibGUgQm9va2luZyBDaGFuZ2UgRm9ybQ==" } 
+    ];
+
+    function accessVault() {
+        const k = document.getElementById('sys_key').value;
+        if (btoa(k) === _sys_0x1) {
+            const v = document.getElementById('vault_links');
+            _sys_0x2.forEach(item => {
+                const a = document.createElement('a');
+                a.href = atob(item.d);
+                a.innerText = ">> ACCESS: " + atob(item.l);
+                a.className = "f-link";
+                v.appendChild(a);
+            });
+            document.getElementById('input_zone').style.display = "none";
+            v.style.display = "block";
+        } else { alert("ACCESS DENIED: INTRUSION DETECTED"); }
+    }
+</script>
+</body>
+</html>
